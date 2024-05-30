@@ -693,8 +693,7 @@
 
 % 粗细页眉
 \newcommand{\makeheadrule}{%
-\makebox[-3pt][l]{\rule[.7\baselineskip]{\headwidth}{0.4pt}}
-\rule[0.85\baselineskip]{\headwidth}{2.25pt}\vskip-.8\baselineskip}
+\rule[0.85\baselineskip]{\headwidth}{0.4pt}\vskip-.8\baselineskip}
 \makeatletter
 \renewcommand{\headrule}{%
     {\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi

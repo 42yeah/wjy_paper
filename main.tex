@@ -98,14 +98,17 @@
 \makeenglishpage   % 英文答辩页
 
 \frontmatter  % 前言部分
- \pagenumbering{Roman} % 页码大写罗马字体
+\pagestyle{plain}
+\pagenumbering{Roman} % 页码大写罗马字体
   \include{chapter/abstract}  % 摘要
   \begin{spacing}{1.0}
   \tableofcontents             % 目录
 %  \tableofengcontents		   % 英文目录, 只有使用双语章节时才使用, 例如\bichapter{中文章名}{English Chapter}, 此外还有\bisection, \bisubsection, \bicaption
 %  \listoftables               % 表格目录
 %  \listoffigures              % 插图目录
-  \end{spacing}
+\end{spacing}
+\clearpage
+\pagestyle{fancy}
 \mainmatter   %% 正文部分
 
 %\linenumbers  %% 开始添加行号, 盲审时使用

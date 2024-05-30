@@ -69,7 +69,7 @@
 %% graphics packages
 \RequirePackage{graphicx}
 %% sort and compress citations
-\RequirePackage[compress,numbers,square,comma]{natbib} %删除sort&将不进行引用顺序排列
+\RequirePackage[compress,numbers,square,comma,super]{natbib} %删除sort&将不进行引用顺序排列
 %% insert pdf pages
 \RequirePackage{pdfpages}
 %% for table
@@ -176,6 +176,7 @@
 \RequirePackage[list=off]{bicaption}
 \captionsetup[figure][bi-second]{name=Figure,list=no}
 \captionsetup[table][bi-second]{name=Table,list=no}
+\captionsetup{labelsep=space}
 
 
 % packages and settings depend on PDF mode

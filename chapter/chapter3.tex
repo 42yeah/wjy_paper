@@ -55,7 +55,7 @@ RGB、YUV和HSV颜色空间通常用于影像处理。RGB颜色空间是最常�
 &S= \begin{cases}0， & \text { if } M=0 \\
 \frac{M-m}{M}=1-\frac{m}{M}， & \text { otherwise }\end{cases} \\
 &V=M
-\end{aligned}.
+\end{aligned}
 \end{equation}
 
 HSV颜色空间相较于RGB颜色空间，在模拟人类视觉感知上更为贴近\cite{jin2018multimodal}，HSV颜色空间中多个通道的使用可以单独处理，并且彼此独立。所以，在HSV色彩模式下，能够显著简化影像分析与处理的复杂度。它也用于影像融合\cite{2018Scene}。HSV颜色空间在影像处理中得到了广泛的应用，通常使用不同的通道来解决不同的问题。与RGB空间相比，HSV空间可以非常直观地表达颜色、色调和明暗度，便于颜色之间的对比和情感的交流。因此，本文还将HSV颜色空间的优势应用到医学影像融合中。为了更好地提取有用的MS-Info，本节采用了一个自定义的$V$分量，这将在下一节中详细介绍。

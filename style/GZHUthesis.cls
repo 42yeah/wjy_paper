@@ -737,7 +737,8 @@
 %\let\oldtableofcontents\tableofcontents
 %\renewcommand\tableofcontents{
 %    \oldtableofcontents
-%}
+%  }
+\setcounter{tocdepth}{1}
 \renewcommand\tableofcontents{%
     \if@twocolumn
       \@restonecoltrue\onecolumn

@@ -1,0 +1,100 @@
+% !TEX root = ../main.tex
+\begin{abstract}
+\addcontentsline{toe}{chapter}{\bfseries Abstract(In Chinese)}
+\if 0
+%自己查重时候的摘要前两段：
+医学影像分析的进步得益于电子科学技术的飞速发展，这不仅推动了医学
+影像设备的不断创新，也极大地提升了临床诊断的精确度和效率。尽管医学影
+像在疾病诊断中展现出巨大的潜力，但由于影像科医生培养周期长且科室规模
+增长缓慢，医生常常面临长时间工作和高负荷的压力。因此，智能辅助诊断技
+术成为了缓解这一困境的关键技术之一，特别是在人工智能技术迅速发展的今
+天，深度学习技术为医学影像分析带来了革命性的突破。当前，尽管智能辅助
+诊断技术取得了一定进展，但它们大多依赖于单一模态的数据，忽略了其他潜
+在的诊断信息。基于医学影像组学的智能辅助诊断技术有望弥补这一不足，为
+医生提供更加精确的诊断支持，并有助于实现疾病的早期筛查，对改善患者的
+预后具有重要意义。
+
+医学影像组学分析作为一个交叉研究领域，正经历从传统手工设计特征到
+特征学习的演变。深度学习方法的崛起为医学影像组学分析带来了新的动力，无
+需人工设计，使得模型能够直接从医学影像中学习特征。本研究旨在通过人工
+智能和影像组学的综合应用，结合机器学习和深度学习技术，对脑肿瘤、阿尔
+茨海默病和帕金森疾病的多模态医学数据进行智能辅助诊断。本研究立足临床
+实际需求，紧紧围绕着基于医学影像组学的智能辅助诊断算法研究，主要进行
+了以下工作：
+\fi
+
+\if 0
+%预答辩时候的摘要前4段：
+医学影像数据占据了90\%的医学信息，是疾病筛查和诊治最主要的信息来源，医学影像诊断也是辅助临床疾病诊疗最重要的手段，约临床诊断的 70\% 依靠医学影像。然而，由于大多数医学影像检查排队久、医学影像诊断等待时间长、影像医生负荷严重、医生水平区域差异性大等原因，整体影像诊断的误诊漏诊率难以达到临床需求，运用人工智能方法来辅助医生在更舒适的工作环境下做出高质量的医学影像诊断成为急切需求。近年来随着深度学习等方法在自然图像视觉任务中的席卷与应用，基于医学影像的智能辅助诊断研究也逐渐被关注并取得快速发展。包括CT、MRI（磁共振成像）、超声、眼底影像等在内的大部分传统医学影像都可以与Al结合，应用场景覆盖头、胸、腹、骨等全身部位大部分疾病种类。未来随着技术的不断迭代完善，基于影像数据的智能辅助诊断技术产品将得以快速发展和应用，市场前景巨大。据中国AI医学影像行业分析数据显示，2021年我国AI医学影像市场规模为8.2亿元，预计2025年将突破100亿元，2030年有望达到923.1亿元。
+
+%不同疾病依赖的影像检查类别不同，本文工作主要关注脑疾病，常用的影像检查包括。。。
+不同疾病依赖的影像检查类别不同，本文工作主要关注脑疾病的诊断，常用的影像检查包括CT、MRI、PET等，这些检查能够提供脑部结构和功能的详细信息，对于脑疾病的早期发现和治疗规划至关重要。脑疾病种类繁多，诊断过程复杂，因此需要多模态影像技术共同作为辅助诊断依据，以提高诊断的准确性和全面性。多模态融合技术结合了不同类型影像的优势，例如CT和MRI可以互补彼此在分辨率和软组织对比度方面的不足，而PET则可以提供关于脑部代谢状态的额外信息。
+
+%脑疾病种类多，诊断困难，需要多模态影像共同作为辅助诊断依据。。。引出多模态融合的必要性，现有方法的局限性，比如侧重于将自然图像融合的方法直接运用到医学影像，没有将医学信息和影像特征充分结合。
+%AD/PD病因更为复杂，受多种因素影响，生物标志物包括。。。需要跨模态影像组数据共同作为辅助诊断依据。。。，影像组学分析的必要性，现有方法的局限。。。
+AD和PD等神经退行性疾病的病因尤为复杂，受遗传、环境和生活方式等多种因素影响。这些疾病的生物标志物包括$\beta$-淀粉样蛋白和$tau$蛋白沉积（AD），以及$\alpha$-突触核蛋白聚集（PD）。为了更准确地诊断这些疾病，需要跨模态影像组数据共同作为辅助诊断依据，并且影像组学分析变得尤为重要。然而，现有的多模态融合方法往往侧重于将自然图像融合的方法直接运用到医学影像，没有充分考虑医学信息和影像特征之间的内在联系，这限制了其在脑疾病诊断中的应用效果。
+因此，本文旨在探讨如何改进多模态融合技术，以便更有效地结合医学信息和影像特征，提高脑疾病的诊断准确率。同时，也将讨论如何克服现有方法的局限性，以促进脑疾病的精准诊疗。
+
+当前，尽管智能辅助诊断技术取得了一定进展，但它们大多依赖于单一模态的数据，忽略了其他潜在的诊断信息。基于医学影像组学的智能辅助诊断技术有望弥补这一不足，为医生提供更加精确的诊断支持，并有助于实现疾病的早期筛查，对改善患者的预后具有重要意义。医学影像组学分析作为一个交叉研究领域，正经历从传统手工设计特征到特征学习的演变。深度学习方法的崛起为医学影像组学分析带来了新的动力，无需人工设计，使得模型能够直接从医学影像中学习特征。本研究旨在通过人工智能和影像组学的综合应用，结合机器学习和深度学习技术，对脑肿瘤、阿尔茨海默病和帕金森疾病的多模态医学数据进行智能辅助诊断。本研究立足临床实际需求，紧紧围绕着基于医学影像组学的智能辅助诊断算法研究，主要进行了以下工作：
+\fi
+
+%%  预答辩后更改的摘要内容（要求 <= 2000字）：
+医学影像数据是疾病诊断的关键信息源，传统的影像诊断手段因人为因素易产生误诊和漏诊的问题。因此，人工智能辅助诊断的需求日益迫切。对于脑部疾病，特别是阿尔茨海默病（AD）和帕金森病（PD）等神经退行性疾病，这些疾病的诊断主要依赖于CT、MRI、PET等影像检查，这些检查能提供脑部结构和功能的详细信息。
+由于脑疾患类型多样且诊断流程复杂，因此整合多模态影像数据成为提升诊断精确度与全面性的关键环节。
+一方面，现行的多模态影像融合策略在一定程度上忽视了医学信息与影像特征间的内在关联性，倾向于简单套用自然图像融合技术，这种局限性在脑疾病诊断中限制了其实际效能。因此，本研究旨在从耦合医学信息与影像特征出发探究多模态融合技术新方法，增强对脑疾病诊断的准确性和医学可解释性。%同时，也将讨论如何克服现有方法的局限性，以促进脑疾病的精准诊疗。
+
+另一方面，尽管现阶段基于医学影像数据的智能辅助诊断技术已取得了显著进步，但在很大程度上仍受制于对单一模态影像数据的过分依赖，以及忽略了其他潜在的诊断信息，这导致某些潜在的诊断线索可能被忽略。与此相比，基于医学影像组学的智能辅助诊断方法则展现出填补这一空白的潜力，它能够为临床医生提供更为精准的诊断依据，并有助于实现疾病的早期筛查，从而显著改善患者的预后。
+医学影像组学作为一门新兴的交叉研究领域，正在经历从传统的手工设计特征到特征学习的转型。深度学习方法的兴起赋予了医学影像组学全新的研究动能，使得模型能够直接从医学影像中发掘有价值的信息特征。本研究旨在通过人工智能和影像组学的综合应用，结合机器学习和深度学习技术，对脑肿瘤、AD和PD的多模态医学数据进行智能辅助诊断。本研究立足临床实际需求，紧紧围绕着基于医学影像组学的智能辅助诊断算法研究，主要开展了以下工作：
+
+
+（1）针对现有的大多医学影像融合方法没有考虑医学影像的医学语义信息的问题，本文提出了一种基于医学语义信息引导的医学影像融合方法（MsgFusion）。首先在多模态脑影像的关键医学语义信息和影像特征之间建立关系，接着引导使用两个分支的特征提取和影像融合框架的设计。其中，在融合过程中使用了一种基于分层分类的策略，用于重建融合影像，以保持和增强反映解剖结构和功能代谢的突出的医学语义信息。相对现有的一些方法，本文提出的方法在6/7个客观评估指标上和30位临床医生主观评估上均占据优势。
+
+（2）因磁共振成像与正电子发射断层成像的融合，可以将生物解剖信息和生理代谢信息结合起来，对临床诊断和病变定位具有重要意义。因此，本文提出一种多维特征的自适应线性融合方法（MdAFuse）。在特征提取阶段，构建三维特征独立的提取模块，可以有效地利用结构信息。在融合阶段，建立多维特征的仿射映射函数，以保持特征之间恒定的几何关系。此外，本文提出的方法中还含有关键特征可视化增强部分，旨在观察脑病变的动态生长，这可以促进脑肿瘤的早期诊断和治疗。实验结果表明，本文的方法得到了临床医生的高度评价和统计数据的支持。其中，本文提出的方法在SSIM和VIF指标上分别提升了5.61\%和13.76\%。
+
+（3）针对绝大多数基于神经网络的分类方法都只能提取局部特征，感受野有限的问题，本文提出一种有效扩大感受野的小波卷积单元。另外，细粒度分类对于认知障碍的准确诊断和正确治疗具有重要意义。本文进一步设计小波卷积单元网络（WCU-Net）。并成功应用于AD的细粒度多分类任务，在基于AD的脑DTI数据上首次实现了细粒度三分类。在细粒度三分类的实验中，均能获得超过95\%的精确度。另外，在细粒度四（AD、NC、EMCI、LMCI）分类中，获得了93.79\%的精确度，比现有的SOTA方法提高了1.19\%。
+
+（4）基于PD分类预测的研究，本文综合分析了国内外PD分类预测的智能辅助诊断技术，并梳理了利用机器学习模型进行辅助PD早期检测的研究工作，以指导早期干预和防止病情进展。首次尝试将帕金森病（PD）的诊断与疾病进展区分开来，不仅仅局限于简单的分类预测。另外，
+探讨了帕金森病预测领域的最新研究趋势，并统计了PubMed数据库中相关主题的文献数量。结合实际临床需求，概述了帕金森病预测的未来发展方向，这为智能辅助诊断提供了有价值的见解。
+
+（5）随着对评估和跟踪帕金森病进展的动态监测变得越来越重要，本文提出了一种基于跨模态数据融合的PD进展预测新方法（CMFP）。该方法的独特之处在于采用纵向数据研究方法，结合机器学习技术，建立了早期PD进展预测模型。CMFP方法对PD进展的预测达到77.91\%的AUC。与仅使用临床数据、DTI数据和DAT数据的预测相比，AUC分别提升了24.48\%、30.78\%和32.7\%。研究结果显示，跨模态数据融合显著提升了单模态预测的准确度，并且也说明了DTI数据与临床结合更有助于提高预测PD进展的性能，可辅助临床诊断。
+
+本研究充分利用影像组学（多模态和异构数据），以机器学习或深度学习为基础，充分发挥人工智能在医疗领域的潜力，以辅助医生的临床决策。通过为医疗团队提供更加精准详实的数据分析及丰富的临床洞见，旨在为患者提供更个性化和有效的治疗方案，从而提升患者的生存质量、延长生存期。
+
+
+\keywords{多模态; 医学影像分析; 影像组学; 深度学习; 智能辅助诊断}
+\end{abstract}
+
+\clearpage{\cleardoublepage}
+\newpage
+
+\begin{englishabstract}
+\addcontentsline{toe}{chapter}{\bfseries Abstract(In English)}
+Medical imaging data serves as a critical source of information for disease diagnosis, and traditional imaging diagnostic methods are prone to misdiagnosis and missed diagnosis due to human factors. As a result, the demand for artificial intelligence-assisted diagnosis is increasingly pressing. For brain diseases, particularly neurodegenerative disorders such as Alzheimer's Disease (AD) and Parkinson's Disease (PD), the diagnosis of these conditions heavily relies on imaging examinations like CT, MRI and PET, which provide detailed structural and functional information about the brain.
+Given the diversity of brain disorders and the complexity of their diagnostic processes, integrating multi-modal imaging data becomes a pivotal step towards enhancing both diagnostic precision and comprehensiveness. On one hand, current strategies for fusing multi-modal imaging often overlook the intrinsic relationship between medical information and imaging characteristics, opting instead for straightforward applications of natural image fusion techniques. This limitation constrains their practical effectiveness in diagnosing brain diseases. Therefore, this research aims to
+investigate novel multi-modal fusion methodologies by exploring the coupling between medical information and image characteristics, with the goal of enhancing diagnostic accuracy and interpretability for brain diseases. 
+
+On the other hand, despite significant advancements made in the field of intelligent auxiliary diagnostic technology based on medical imaging data at present, these systems remain largely constrained by an over-reliance on single-modal imaging data and, consequently, may overlook other potential diagnostic information, leading to the possibility of disregarding certain subtle diagnostic clues. By contrast, intelligent diagnostic approaches rooted in medical radiomics show particular promise in bridging this gap. These methodologies offer clinicians more accurate diagnostic foundations and play a crucial role in enabling early disease screening, thereby significantly improving patients' prognoses.
+Medical radiomics, as an emerging interdisciplinary field, is undergoing a transformation from the conventional manual design of features to feature learning. The rise of deep learning methodologies has infused medical radiomics with fresh research momentum, enabling models to directly extract valuable informative features from medical images. This research aims at integrating artificial intelligence (AI) with medical radiomics, coupling machine learning and deep learning techniques, to conduct intelligent auxiliary diagnosis on multi-modal medical data pertaining to brain tumors, AD, and PD.
+Grounded in actual clinical needs, this research focuses centrally on the investigation of intelligent auxiliary diagnostic algorithms based on medical radiomics, and it primarily encompasses the following tasks: 
+
+(1) In response to the prevalent issue where most existing medical image fusion methods do not adequately consider the medical semantic information within medical images, this thesis proposes a medical image fusion method guided by medical semantic information, termed MsgFusion. Initially, it establishes a correlation between essential medical semantic information and corresponding image features across multi-modal brain images. Subsequently, it guides the design of a dual-branch framework for feature extraction and image fusion.
+Within this framework, a hierarchical classification strategy is employed during the fusion process to reconstruct the fused image, ensuring that the prominent medical semantic information reflecting anatomical structures and functional metabolism is maintained and enhanced. Compared to several existing methods, the proposed MsgFusion method demonstrates superiority across six out of seven objective evaluation metrics and also garners favorable evaluations from thirty clinical experts in subjective assessments.
+
+(2) The integration of Magnetic Resonance Imaging with Positron Emission Tomography enables the combination of biological anatomical information and physiological metabolic information, which holds considerable significance for clinical diagnosis and lesion localization. Consequently, this thesis presents a novel adaptive linear fusion method for multidimensional features, referred to as MdAFuse.
+During the feature extraction phase, a three-dimensional independent module is constructed to effectively exploit structural information. In the fusion stage, an affine mapping function is established for the multidimensional features to preserve constant geometric relationships among them. Moreover, the proposed methodology incorporates a crucial part dedicated to visual enhancement of key features, aimed at observing the dynamic growth of brain lesions, which can facilitate early diagnosis and treatment of brain tumors.
+Experimental results demonstrate that the method introduced in this thesis has been highly commended by clinical practitioners and substantiated by statistical data. Specifically, the proposed method achieved improvements of 5.61\% and 13.76\% respectively in the Structural Similarity Index (SSIM) and Visual Information Fidelity (VIF) metrics.
+
+(3) Addressing the prevailing issue that the majority of neural network-based classification methods are limited in their ability to extract global features and possess finite receptive fields, this thesis introduces a novel Wavelet Convolution Unit (WCU) designed to effectively expand the receptive field. Furthermore, fine-grained classification plays a pivotal role in accurate diagnosis and appropriate treatment of cognitive impairments. this thesis further devises a Wavelet Convolutional Unit Network (WCU-Net), successfully applying it to fine-grained multi-classification tasks in the context of Alzheimer's Disease (AD). For the first time, it achieves fine-grained triple classification on AD-related brain Diffusion Tensor Imaging (DTI) data. In experiments involving fine-grained triple classification, the model consistently attains precision rates exceeding 95\%.
+Moreover, in the case of fine-grained quadruple (AD, NC, EMCI, LMCI) classification, the model achieves a precision rate of 93.79\%, representing an improvement of 1.19\% over the current state-of-the-art (SOTA) methods.
+
+(4) Based on studies concerning PD classification prediction, this thesis conducts a comprehensive analysis of both domestic and international intelligent auxiliary diagnostic technologies for PD classification and progression forecasting. It further reviews research endeavors that leverage machine learning models for assisting in the early detection of PD, aiming to guide timely interventions and prevent disease progression. For the first time, an attempt is made to distinguish between PD diagnosis and its disease progression, transcending mere binary or categorical predictions.
+Additionally, this thesis explores the latest research trends in the realm of PD prediction and statistically documents the number of related publications in the PubMed database. Grounded in practical clinical demands, this work delineates prospective avenues for PD prognosis, imparting invaluable guidance for the advancement of intelligent diagnostic aids.
+
+(5) With the increasing importance of dynamic monitoring for assessing and tracking the progression of PD, this thesis presents a novel method for predicting PD progression based on cross-modal data fusion, coined CMFP (Cross-Modal Fusion for Parkinson’s Progression Prediction). The uniqueness of the CMFP approach lies in its longitudinal data research methodology, combining machine learning techniques to construct an early PD progression prediction model. The method achieves an AUC (Area Under Curve) of 77.91\% in predicting PD progression.
+Comparatively, when using CMFP, there is a respective increase of 24.48\%, 30.78\%, and 32.7\% in the AUC compared to predictions relying solely on clinical data, DTI data, and DAT (Dopamine Transporter) data alone. This research findings indicate that cross-modal data fusion significantly enhances the accuracy of predictions made using single modalities and further demonstrates that the integration of DTI data with clinical data particularly contributes to improving the performance in predicting PD progression. This supports its potential use as an auxiliary tool in clinical diagnosis.
+
+
+This research fully harnesses the power of radiomics (multi-modal and heterogeneous data), building upon Machine Learning or Deep Learning foundations, to maximize the potential of Artificial Intelligence in the healthcare domain, thus supporting clinical decision-making for physicians. By furnishing medical teams with more precise and comprehensive data analyses, as well as rich clinical insights, the aim is to provide patients with more personalized and efficacious treatment plans, ultimately enhancing patient quality of life and prolonging survival periods.
+
+\englishkeywords{Multi-modal; Medical image analysis; Radiomics; Deep learning; Intelligent assisted diagnosis}
+\end{englishabstract}

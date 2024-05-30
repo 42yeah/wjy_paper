@@ -749,9 +749,9 @@
 
 \makeatletter
 \ctexset{chapter={number={\arabic{chapter}}}}
-\renewcommand{\thefigure}{\ifnum \c@chapter>\z@ \thechapter.\fi \@arabic\c@figure}
-\renewcommand{\thetable}{\ifnum \c@chapter>\z@ \thechapter.\fi \@arabic\c@table}
-\renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
+\renewcommand{\thefigure}{\ifnum \c@chapter>\z@ \thechapter-\fi \@arabic\c@figure}
+\renewcommand{\thetable}{\ifnum \c@chapter>\z@ \thechapter-\fi \@arabic\c@table}
+\renewcommand{\theequation}{\arabic{chapter}-\arabic{equation}}
 
 %% 摘要格式
 \newenvironment{abstract}

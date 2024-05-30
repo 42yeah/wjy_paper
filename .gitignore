@@ -1,0 +1,7 @@
+**/*.log
+main.pdf
+main.blg
+main.bbl
+**/*.aux
+main.toc
+main.out

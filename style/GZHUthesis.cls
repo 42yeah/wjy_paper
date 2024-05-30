@@ -162,7 +162,7 @@
 \WarningFilter{pdflatex}{Overfull}
 \WarningFilter{xelatex}{Overfull}
 
-\RequirePackage{datetime}
+\RequirePackage{datetime2}
 \renewcommand{\today}{{\number\year}年{\number\month}月{\number\day}日, \currenttime}
 
 % list
